@@ -1,2 +1,2 @@
 // intial commit
-const environment = 'development';
+const changeVariable = 'development';

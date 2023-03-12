@@ -18,14 +18,14 @@ while(round <= 5) {
     // generate correct answer
     const correctAnswer = Math.ceil(Math.random() * 3);
 
-    const playerOneAnswer = prompt(`${playerOneName} please enter the number between 1 - 3: `);
+    const playerOneAnswer = Number(prompt(`${playerOneName} please enter the number between 1 - 3: `));
     // validate player 1 answer
     if (playerOneAnswer < 1 || playerOneAnswer > 3) {
         console.log('Incorrect number!')
         continue;
     }
-    const playerTwoAnswer = prompt(`${playerTwoName} please enter the number between 1 - 3: `);
-    // valudate player 2 answer
+    const playerTwoAnswer = Number(prompt(`${playerTwoName} please enter the number between 1 - 3: `));
+    // validate player 2 answer
     if (playerTwoAnswer < 1 || playerTwoAnswer > 3) {
         console.log('Incorrect number!')
         continue;
@@ -40,7 +40,7 @@ while(round <= 5) {
     // determine winner
     if (playerOneAnswer == correctAnswer) {
         console.log(`${playerOneName} wins round ${round}`);
-        playerOneScore ++;
+        playerOneScore ++; // playerOneScore = playerOneScore + 1;
     } else if (playerTwoAnswer == correctAnswer) {
         console.log(`${playerOneName} wins round ${round}`);
         playerTwoScore ++;

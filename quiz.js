@@ -20,13 +20,13 @@ while(round <= 5) {
 
     const playerOneAnswer = Number(prompt(`${playerOneName} please enter the number between 1 - 3: `));
     // validate player 1 answer
-    if (playerOneAnswer < 1 || playerOneAnswer > 3) {
+    if (playerOneAnswer < 1 || playerOneAnswer > 3 || isNaN(playerOneAnswer)) {
         console.log('Incorrect number!')
         continue;
     }
     const playerTwoAnswer = Number(prompt(`${playerTwoName} please enter the number between 1 - 3: `));
     // validate player 2 answer
-    if (playerTwoAnswer < 1 || playerTwoAnswer > 3) {
+    if (playerTwoAnswer < 1 || playerTwoAnswer > 3 || isNaN(playerTwoAnswer)) {
         console.log('Incorrect number!')
         continue;
     }
